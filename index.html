@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Bish-Bosh 2.0 & ToDo-lista</title>
+        <link rel="stylesheet" type="text/css" href="site.css">
+    </head>
+    <body>
+        <header> 
+            <div><h1>Bish-Bosh 2.0 & ToDo-lista</h1></div>
+        </header>
+        <main>
+            <div>
+                <h3>Vänligen ange önskad bish, bosh och antal loopar - endast positiva tal:</h3>
+                <form id="inputForm">
+                    <input type="number" id="bishInput" placeholder="Bish-tal här">
+                    <input type="number" id="boshInput" placeholder="Bosh-tal här">
+                    <input type="number" id="loopInput" placeholder="Listans längd här">
+                    <input type="submit" value="Skicka">
+                </form>
+            </div>
+            <div>
+                <p>
+                Här nedan kommer du att se en "bish-bosh"-lista:
+                </p>
+            </div>
+            <div>
+                <p id="output"></p>
+            </div>
+
+            <div>
+                <h1>Skriv in vad du behöver handla <br>
+                    (..eller vad du vill lägga in i din ToDo-lista)</h1>
+                <input type="text" id="todoInput" placeholder="Skriv in här">
+                <button id="addButton">Lägg till</button>
+            </div>
+
+            <div>
+                <p>Här nedan kommer du att se en lista av det du lägger.<br><br>
+                <b>Klicka på texten</b> i listan för att markera som klart:
+                </p>
+            </div>
+
+            <div>
+                <ul id="todoList">
+
+                </ul>
+            </div>
+        
+        </main>
+        <footer>
+            <div> &#169; 2023 Camilla  Ridström</div>
+        </footer>
+    <script>
+    for(let i = 1; i <= 100; i++)
+    {
+        if(i % 3 === 0 && i % 4 === 0) 
+        {
+            console.log('Bish-Bosh');
+        }
+        else if (i % 3 === 0)
+        {
+            console.log('Bish'); 
+        }
+        else if (i % 4 === 0)
+        {
+            console.log('Bosh'); 
+        }
+        else
+        {
+            console.log(i);
+        }
+    } 
+    </script>    
+    <script src="bishbosh2_0.js"></script>
+    <script src="toDoList.js"></script>
+    </body>
+</html>
