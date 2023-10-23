@@ -22,27 +22,32 @@
             </div>
             <div>
                 <p>
+                Bish-Bosh listar alla tal mellan 1 och listans längd (antalet loopar), med vissa undantag:<br>
+                Om talet är jämnt delbart med det Bish-tal du angivit listas ‘Bish’ istället för talet.<br>
+                Om talet är jämnt delbart med det Bosh-tal du angivit listas ‘Bosh’ istället för talet.<br>
+                Och om talet är jämnt delbart både med det första och andra angivna talet skrivs ‘Bish-Bosh’ istället för talet.<br><br>
+
                 Här nedan kommer du att se en "bish-bosh"-lista:
                 </p>
             </div>
-            <div>
+            <div id="outputContainer">
                 <p id="output"></p>
             </div>
 
             <div>
-                <h1>Skriv in vad du behöver handla <br>
-                    (..eller vad du vill lägga in i din ToDo-lista)</h1>
+                <h3>Skriv in vad du behöver handla <br>
+                    (..eller vad du vill lägga in i din ToDo-lista)</h3>
                 <input type="text" id="todoInput" placeholder="Skriv in här">
                 <button id="addButton">Lägg till</button>
             </div>
 
             <div>
-                <p>Här nedan kommer du att se en lista av det du lägger.<br><br>
+                <p>Här nedan kommer du att se en lista av det du lägger till.<br><br>
                 <b>Klicka på texten</b> i listan för att markera som klart:
                 </p>
             </div>
 
-            <div>
+            <div id="listContainer">
                 <ul id="todoList">
 
                 </ul>
@@ -50,7 +55,7 @@
         
         </main>
         <footer>
-            <div> &#169; 2023 Camilla  Ridström</div>
+            <div><br> &#169; 2023 Camilla  Ridström</div>
         </footer>
     <script>
     for(let i = 1; i <= 100; i++)

@@ -3,10 +3,15 @@ const addButton= document.getElementById('addButton');
 const todoList= document.getElementById('todoList');
 
 addButton.addEventListener('click', function () {
-    const taskText = todoInput.value;
+    
+    const inputText = todoInput.value;
+    let firstLetter = inputText.charAt(0).toUpperCase();
+    let restOfString = inputText.slice(1);
+    const tdI = firstLetter + restOfString;
+    const taskText = tdI;
     if(taskText.trim() !== ''){
         const listItem = document.createElement('li');
-        listItem.innerHTML = taskText; // + " ";
+        listItem.innerHTML = taskText;
 
         const removeButton = document.createElement('button');
         removeButton.innerText = 'Ta bort helt från listan';
@@ -40,57 +45,9 @@ function setupTaskActions(taskItem, removeButton) {
     });
 }
 
-/*
-taskItem.addEventListener('mouseenter', function () {
-    taskItem.addEventListener('mouseleave', function () {
-        if(taskItem.classList.contains('completed')) {
-            todoList.removeChild(taskItem);
-    }
-    taskItem.removeEventListener('mouseleave', arguments.callee);
-    });
-});
-*/
-
-    /*
-    taskItem.addEventListener('mouseleave', function (event){
-        event.preventDefault();
-        
-        if (taskItem.classList.contains('completed')) {
-        taskItem.classList.remove('completed')
-        } else {
-        taskItem.classList.add('completed')
-        }
-    });
-*/
-
 const taskItem = document.querySelectorAll('#todoList li');
 const removeButtons = document.querySelectorAll('.remove-button');
 
 taskItem.forEach(function (taskItem, index) {
     setupTaskActions(taskItem, removeButtons[index]);
 });
-    
-
-/*
-todoList.addEventListener('click', function (event){
-    if(event.target.tagName === 'LI'){
-        const listItem = event.target;
-        listItem.classList.toogle('completed');
-    } else if (event.target.classList.contains('completed')){
-        todoList.removeChild(event.target);
-    }
-});
-*/
-
-/*
-function addTask(){
-    var taskInput = document.getElementById("taskInput"); // ' ' ?
-    var taskText = taskInput.ariaValueMax.trim();
-    if (taskText !==""){
-        var taskList = document.getElementById("taskList");
-        var taskItem = document.createElement("li");
-        taskItem.innerText = taskText;
-        task
-    }
-}
-*/

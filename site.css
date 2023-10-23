@@ -1,8 +1,19 @@
+#outputContainer p {
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+}
+.warning-text{
+    color:red;
+}
+#listContainer ul {
+    font-weight: bold;
+    font-size: 18px;
+}
 li button{
-    margin-left: 100px;
+    margin-left: 200px;
     font-size: 10px;
 }
-
 .completed{
     text-decoration: line-through;
     background-color: #ddd;
